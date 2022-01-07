@@ -2,7 +2,7 @@ interface Cache {
 	[key: number]: number;
 }
 
-export function getNthFib(n: number, memoize: Cache = {1: 0, 2: 1}){
+export function getNthFib(n: number, memoize: Cache = {1: 0, 2: 1}) {
 	if(n in memoize) {
 		return memoize[n]
 	} else {
