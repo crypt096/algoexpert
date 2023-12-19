@@ -14,13 +14,13 @@ export function removeDuplicatesFromLinkedList(linkedList: LinkedList) {
   let nextNode: LinkedList | null = linkedList.next;
 
   while(!!currentNode) {
-    if(currentNode.value !== nextNode?.value) {
+    if (currentNode.value !== nextNode?.value) {
       currentNode.next = nextNode;
       currentNode = nextNode;
     }
 
     nextNode = nextNode?.next || null;
   }
-
+  
   return linkedList;
 }
