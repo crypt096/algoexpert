@@ -28,3 +28,6 @@ export class Node {
     return array;
   }
 }
+
+// Time complexity: O(V + E)
+// Space complexity: O(V)
