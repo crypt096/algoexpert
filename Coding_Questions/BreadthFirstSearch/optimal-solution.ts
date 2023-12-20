@@ -1,3 +1,7 @@
+
+// Time complexity: O(V + E)
+// Space complexity: O(V)
+
 export class Node {
   name: string;
   children: Node[];
@@ -28,6 +32,3 @@ export class Node {
     return array;
   }
 }
-
-// Time complexity: O(V + E)
-// Space complexity: O(V)
