@@ -1,3 +1,5 @@
+// O(nd) time | O(n) space
+
 export function minNumberOfCoinsForChange(n: number, denoms: number[]) {
   const numberOfCoins: number[] = new Array(n+1).fill(Infinity);
   numberOfCoins[0] = 0;
