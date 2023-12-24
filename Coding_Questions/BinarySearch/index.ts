@@ -4,7 +4,7 @@ export function binarySearch(array: number[], target: number): number {
   let left = 0;
   let right = array.length - 1;
 
-  while (left < right) {
+  while (left <= right) {
     const middle = Math.floor((left + right) / 2);
     const potentialMatch = array[middle];
 
@@ -19,3 +19,4 @@ export function binarySearch(array: number[], target: number): number {
 
   return -1;
 }
+
