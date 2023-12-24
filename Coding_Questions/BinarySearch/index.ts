@@ -1,3 +1,5 @@
+// O(log (n)) time | O(1) space
+
 export function binarySearch(array: number[], target: number): number {
   let left = 0;
   let right = array.length - 1;
