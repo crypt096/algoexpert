@@ -11,10 +11,10 @@ class BST {
 }
 
 export function findClosestValueInBst(tree: BST, target: number) {
-  let closest = tree.value;
+  let closest: number = tree.value;
   let currentNode: BST | null = tree;
 
-  while(currentNode !== null) {
+  while(!!currentNode) {
     if (Math.abs(target - closest) > Math.abs(target - currentNode.value)) {
       closest = currentNode.value;
     }
@@ -27,6 +27,6 @@ export function findClosestValueInBst(tree: BST, target: number) {
       break;
     }
   }
-  
+
   return closest;
 }
