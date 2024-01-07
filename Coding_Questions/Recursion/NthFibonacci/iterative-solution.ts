@@ -6,7 +6,7 @@ export function getNthFib(n: number) {
     const nextFib = lastTwo[0] + lastTwo[1];
     lastTwo[0] = lastTwo[1];
     lastTwo[1] = nextFib;
-    counter++
+    counter++;
   }
 
   return n > 1 ? lastTwo[1] : lastTwo[0];
