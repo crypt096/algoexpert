@@ -1,3 +1,5 @@
+// O(w x h) time | O(w x h) space
+
 export function transposeMatrix(matrix: number[][]) {
   const transposedMatrix: number[][] = [];
 
