@@ -15,6 +15,7 @@ export class Node {
     return this;
   }
 
+  // O(V + E) time | O(V) space - where V is the number of vertices in the Graph and E is the number of edges in the Graph
   depthFirstSearch(array: string[]) {
     array.push(this.name);
 
