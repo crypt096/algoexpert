@@ -1,4 +1,4 @@
-// O(w x h) time | O(w x h) space
+// O(w x h) time | O(w x h) space where w is width of the matrix and h is the height of the matrix
 
 export function transposeMatrix(matrix: number[][]) {
   const transposedMatrix: number[][] = [];
