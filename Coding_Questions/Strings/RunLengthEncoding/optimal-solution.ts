@@ -1,3 +1,5 @@
+// O(n) time | O(n) space - where n is the length of the input string
+
 export function runLengthEncoding(string: string) {
   const encodedStringCharacters: string[] = [];
   let currentRunLength = 1;
