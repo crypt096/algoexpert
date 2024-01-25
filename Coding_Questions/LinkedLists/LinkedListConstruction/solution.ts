@@ -20,6 +20,7 @@ export class DoublyLinkedList {
     this.tail = null;
   }
 
+  // O(1) time | O(1) space
   setHead(node: Node) {
     if (this.head === null) {
       this.head = node;
@@ -30,6 +31,7 @@ export class DoublyLinkedList {
     this.insertBefore(this.head, node);
   }
 
+  // O(1) time | O(1) space
   setTail(node: Node) {
     if (this.tail === null) {
       this.setHead(node);
@@ -39,6 +41,7 @@ export class DoublyLinkedList {
     this.insertAfter(this.tail, node);
   }
 
+  // O(1) time | O(1) space
   insertBefore(node: Node, nodeToInsert: Node) {
     if (nodeToInsert === this.head && nodeToInsert === this.tail) return;
     this.remove(nodeToInsert);
@@ -52,6 +55,7 @@ export class DoublyLinkedList {
     node.prev = nodeToInsert;
   }
 
+  // O(1) time | O(1) space
   insertAfter(node: Node, nodeToInsert: Node) {
     if (nodeToInsert === this.head && nodeToInsert === this.tail) return;
     this.remove(nodeToInsert);
@@ -65,6 +69,7 @@ export class DoublyLinkedList {
     node.next = nodeToInsert;
   }
 
+  // O(p) time | O(1) space
   insertAtPosition(position: number, nodeToInsert: Node) {
     if (position === 1) {
       this.setHead(nodeToInsert);
@@ -80,6 +85,7 @@ export class DoublyLinkedList {
     }
   }
 
+  // O(n) time | O(1) space
   removeNodesWithValue(value: number) {
     let node = this.head;
     while (node !== null) {
@@ -89,12 +95,14 @@ export class DoublyLinkedList {
     }
   }
 
+  // O(1) time | O(1) space
   remove(node: Node) {
     if (node === this.head) this.head = this.head.next;
     if (node === this.tail) this.tail = this.tail.prev;
     this.removeNodeBindings(node);
   }
 
+  // O(n) time | O(1) space
   containsNodeWithValue(value: number) {
     let currentNode = this.head;
     while (currentNode !== null && currentNode.value !== value) currentNode = currentNode.next;
