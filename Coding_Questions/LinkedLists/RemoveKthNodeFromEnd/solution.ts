@@ -8,6 +8,7 @@ export class LinkedList {
   }
 }
 
+// O(n) time | O(1) space - where n is the length of the linked list
 export function removeKthNodeFromEnd(head: LinkedList, k: number) {
   let counter = 1;
   let firstNode: LinkedList = head;
