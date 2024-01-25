@@ -13,6 +13,8 @@ export class BST {
     this.right = null;
   }
 
+  // Average: O(log(n)) time | O(1) space
+  // Worst: O(n) time | O(1) space
   insert(value: number): BST {
     let currentNode: BST = this;
     while (true) {
@@ -35,6 +37,8 @@ export class BST {
     return this;
   }
 
+  // Average: O(log(n)) time | O(1) space
+  // Worst: O(n) time | O(1) space
   contains(value: number) {
     let currentNode: BST | null = this;
     while (currentNode !== null) {
@@ -49,6 +53,8 @@ export class BST {
     return false;
   }
 
+  // Average: O(log(n)) time | O(1) space
+  // Worst: O(n) time | O(1) space
   remove(value: number, parentNode: BST | null = null): BST {
     let currentNode: BST | null = this;
     while (currentNode !== null) {
