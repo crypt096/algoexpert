@@ -10,6 +10,7 @@ class BST {
   }
 }
 
+// O(n) time | O(n) space
 export function inOrderTraverse(tree: BST | null, array: number[]) {
   if (tree !== null) {
     inOrderTraverse(tree.left, array);
@@ -19,6 +20,7 @@ export function inOrderTraverse(tree: BST | null, array: number[]) {
   return array;
 }
 
+// O(n) time | O(n) space
 export function preOrderTraverse(tree: BST | null, array: number[]) {
   if (tree !== null) {
     array.push(tree.value);
@@ -28,6 +30,7 @@ export function preOrderTraverse(tree: BST | null, array: number[]) {
   return array;
 }
 
+// O(n) time | O(n) space
 export function postOrderTraverse(tree: BST | null, array: number[]) {
   if (tree !== null) {
     postOrderTraverse(tree.left, array);
