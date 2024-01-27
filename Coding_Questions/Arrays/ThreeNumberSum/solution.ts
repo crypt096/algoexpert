@@ -1,5 +1,6 @@
 type Triplet = [number, number, number];
 
+// O(n^2) time | O(n) space
 export function threeNumberSum(array: number[], targetSum: number): Triplet[] {
   array.sort((a, b) => a - b);
 
