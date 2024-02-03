@@ -13,13 +13,16 @@ class BST {
 }
 
 export function validateBst(tree: BST) {
-  return validateBstHelper(tree, -Infinity, Infinity);
+  return validateBSTHelper(tree, -Infinity, Infinity);
 }
 
-function validateBstHelper(tree: BST | null, minValue: number, maxValue: number): boolean {
-  if(tree === null) return true;
-  if(tree.value < minValue || tree.value >= maxValue) return false;
-  const leftIsValid = validateBstHelper(tree.left, minValue, tree.value);
-  return leftIsValid && validateBstHelper(tree.right, tree.value, maxValue);
+function validateBSTHelper(tree: BST | null, minValue: number, maxValue: number): boolean {
+  if (tree === null) return true;
+  if (tree.value < minValue || tree.value >= maxValue) return false;
+
+  const isLeftValid = validateBSTHelper(tree.left, minValue, tree.value);
+  const isRightValid = validateBSTHelper(tree.right, tree.value, maxValue);
+
+  return isLeftValid && isRightValid;
 }
 
